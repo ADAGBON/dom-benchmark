@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.angular/
+out-tsc/
+__pycache__/
+*.log
+.DS_Store

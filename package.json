@@ -1,0 +1,13 @@
+{
+  "name": "dom-benchmark",
+  "private": true,
+  "description": "To-do app in React, Angular, Vue and Svelte with an identical DOM benchmark harness",
+  "scripts": {
+    "sync": "node scripts/sync-shared.mjs",
+    "install:all": "cd react-todo && npm install && cd ../angular-todo && npm install && cd ../vue-todo && npm install && cd ../svelte-todo && npm install",
+    "build:all": "npm run sync && cd react-todo && npm run build && cd ../angular-todo && npx ng build && cd ../vue-todo && npm run build && cd ../svelte-todo && npm run build",
+    "test": "python3 bench/functional_test.py",
+    "bench": "python3 bench/run_benchmarks.py -n 25 --traces && python3 bench/run_benchmarks.py -n 25 --warm 5 && python3 bench/run_benchmarks.py -n 10 --cpu 4",
+    "report": "python3 bench/make_report.py"
+  }
+}

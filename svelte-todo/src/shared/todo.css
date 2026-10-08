@@ -1,0 +1,34 @@
+/* Identical styling for all four apps (copied in by scripts/sync-shared.mjs). */
+:root {
+  --bg: #f6f7f9; --card: #ffffff; --ink: #1d2330; --muted: #667085; --line: #e3e6ec;
+  --accent: #2f5bea; --high: #c2372f; --medium: #b7791f; --low: #2f7d4f;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink); background: var(--bg);
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+#bench-panel {
+  position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  padding: 10px 16px; background: #1d2330; color: #fff; font-size: 13px;
+}
+#bench-panel strong { margin-right: 8px; }
+#bench-panel button { font: inherit; padding: 4px 10px; border: 0; border-radius: 4px; cursor: pointer; }
+#bench-panel output { flex-basis: 100%; color: #c9d3ff; font-family: ui-monospace, monospace; }
+.todo-app { max-width: 720px; margin: 24px auto; padding: 0 16px; }
+.todo-app h1 { font-size: 22px; margin: 0 0 12px; }
+.add-form { display: flex; gap: 8px; margin-bottom: 8px; }
+.add-form input { flex: 1; }
+input, select, button { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: #fff; }
+button { cursor: pointer; }
+button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+.count { color: var(--muted); font-size: 13px; margin: 8px 0; }
+#task-list { list-style: none; margin: 0; padding: 0; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+.task { display: flex; align-items: center; gap: 10px; padding: 8px 12px; border-top: 1px solid var(--line); }
+.task:first-child { border-top: 0; }
+.task-name { flex: 1; }
+.task input { flex: 1; }
+.badge { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; padding: 2px 8px; border-radius: 999px; color: #fff; min-width: 64px; text-align: center; }
+.badge-high { background: var(--high); }
+.badge-medium { background: var(--medium); }
+.badge-low { background: var(--low); }
+.empty { color: var(--muted); padding: 16px; text-align: center; }
