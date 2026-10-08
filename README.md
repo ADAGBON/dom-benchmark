@@ -30,7 +30,7 @@ finishes style and layout). Cold start = a fresh page for every sample, 25 sampl
 [`results/RESULTS.md`](results/RESULTS.md) also has the **warm / steady-state** run (5 warm-up rounds
 before each measurement), a **4× CPU-throttled** run approximating a mid-range phone, a breakdown of
 script vs layout time, and DOM node counts. In short: React renders fastest in all three conditions;
-update times are close for all four (Vue fastest at normal speed, Svelte fastest when throttled);
+update times are close for all four (Vue fastest cold, React warm, Svelte under 4× throttling);
 React and Angular delete fastest.
 
 ## Repository layout
